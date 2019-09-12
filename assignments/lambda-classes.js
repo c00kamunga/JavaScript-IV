@@ -60,3 +60,76 @@ class ProjectManager extends Instructor{
         return `${this.name} debugs ${apprentice.name}'s code on ${subject}`
     }
 }
+
+
+
+///////////////// LAMBDA INSTRUCTOR OBJECTS BELOW
+const Vader = new Instructor({
+    name: 'Lord Vader',
+    speciality: 'everything',
+    favlanguage: 'python', 
+    catchPhrase: "You dont know the power of higer order functions...."
+})
+
+const sidious = new Instructor ({
+    name: 'Lord Sidious',
+    specialty: 'everything',
+    favLanguage: 'JavaSith',
+    catchPhrase: "UNLIMITED POWER!!!!!!!"
+})
+
+const Yoda = new Instructor({
+    name: 'Grand Master Yoda',
+    specialty: 'everything',
+    favLanguage: 'Backwards everything',
+    catchPhrase: "Powerful you have become, a software developer i sense in you..."
+})
+
+
+//CODE below here for your Lambda Student Ojbects
+
+const Charmander = new Student ({
+    name: 'Charmander',
+    previousBackground: 'cashier',
+    className: 'Order 66',
+    favSubjects : ['Control Flow', 'Data Models', 'Asynchronity', 'Transpilation']
+})
+
+const Pikachu = new Student ({
+    name: 'Pikachu',
+    previousBackground: 'accountant',
+    className: 'Burger Boys',
+    favSubjects : ['React', 'Closures', 'CSS', 'HTML']
+})
+
+
+const Charmander = new Student ({
+    name: 'Snorlax',
+    previousBackground: 'cashier',
+    className: 'Order 66',
+    favSubjects : ['Methods', 'Objects', 'CSS', 'HTML']
+})
+
+
+
+//CODE BELOW HERE FOR YOUR LAMBDA PROJECT MANADERS
+
+const PeterGriffin = new ProjectManager({
+    name: 'Peter Griffin',
+    gradClassName: 'Family Guy',
+    favInstructor: 'Grand Master Yoda'
+})
+
+const PeterGriffin = new ProjectManager({
+    name: 'Peter Griffin',
+    gradClassName: 'Family Guy',
+    favInstructor: 'Grand Master Yoda'
+})
+
+const PeterGriffin = new ProjectManager({
+    name: 'Peter Griffin',
+    gradClassName: 'Family Guy',
+    favInstructor: 'Grand Master Yoda'
+})
+
+

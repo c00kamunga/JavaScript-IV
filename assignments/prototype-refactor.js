@@ -8,32 +8,35 @@ Prototype Refactor
 
 */
 
-function GameObject(attributes){
-    this.createdAt = attributes.createdAt;
-    this.name = attributes.name;
-    this.dimensions = attributes.dimensions;
+class GameObject{
+    constructor(dude){
+    this.createdAt = dude.createdAt;
+    this.name = dude.name;
+    this.dimensions = dude.dimensions;
   }
-  GameObject.prototype.destroy = function(){
+  destroy(){
     return `${this.name} was removed from the game.`;
   }
+}
 
-function CharacterStats(stats){
-    GameObject.call(this, stats);
-    this.healthPoints = stats.healthPoints;
-  }
-  CharacterStats.prototype = Object.create(GameObject.prototype);
-  CharacterStats.prototype.takeDamage = function(){
-    return `${this.name} took damage.` 
-  };
+class CharacterStats extends GameObject{
+    constructor(things){
+        super(things);
+        this.healthPoints = things.healthPoints;
+    }
+    takeDamage(){
+        return `${this.name} took damage.`
+    }
+}
   
-function Humanoid(human){
-    CharacterStats.call(this, human);
+class Humanoid extends CharacterStats{ 
+    constructor(stuff){
+    super(stuff);
     this.team = human.team;
     this.weapons = human.weapons;
     this.language = human.language;
   }
-  Humanoid.prototype = Object.create(CharacterStats.prototype);
-  Humanoid.prototype.greet = function(){
+  greet(){
     return `${this.name} offers a greeting in ${this.language}.`
   };
  

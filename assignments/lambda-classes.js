@@ -34,12 +34,12 @@ class Student extends Person{
         super(apprentice);
         this.previousBackground = apprentice.previousBackground;
         this.className = apprentice.className;
-        this.faSubjects = apprentice.favSubjects;
+        this.favSubjects = apprentice.favSubjects;
     }
     listsSubjects(){
         console.log(this.favSubjects)
     }
-    PRAssignment(subjects){
+    PRAssignment(subject){
         return `${this.name} has submitted a PR for ${subject}.`
     }
     sprintChallenge(subject){
@@ -159,3 +159,25 @@ const MayorAdamWest = new ProjectManager({
 })
 
 
+console.log(Barinder.speak());
+console.log(Joseph.speak());
+console.log(David.speak());
+console.log(Vader.demo('hoisting'));
+console.log(Vader.grade(Charmander,'CSS'));
+console.log(Vader.grade(Pikachu, 'React'));
+console.log(Vader.grade(Snorlax, 'Constructors'));
+console.log(Pikachu.favSubjects);
+console.log(Charmander.favSubjects);
+console.log(Snorlax.favSubjects);
+console.log(Pikachu.PRAssignment('react'));
+console.log(Snorlax.PRAssignment('CSS'));
+console.log(Charmander.PRAssignment('closures'));
+console.log(Pikachu.sprintChallenge('CSS'));
+console.log(Snorlax.sprintChallenge('HTML'));
+console.log(Charmander.sprintChallenge('Constructors'));
+console.log(PeterGriffin.standUp(PeterGriffin,'WEBPT8'));
+console.log(GlenQuagmire.standUp(GlenQuagmire,'WEBPT8HELP'));
+console.log(MayorAdamWest.standUp(MayorAdamWest,'WEBPT8'));
+console.log(PeterGriffin.debugsCode(Charmander, 'react'));
+console.log(GlenQuagmire.debugsCode(Snorlax, 'react'));
+console.log(MayorAdamWest.debugsCode(Pikachu, 'react'));

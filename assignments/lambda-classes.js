@@ -1,4 +1,6 @@
 // CODE here for your Lambda Classes
+
+
 class Person{
     constructor(civilian){
         this.name = civilian.name;
@@ -51,15 +53,39 @@ class ProjectManager extends Instructor{
     constructor(tactician){
         super(tactician);
         this.gradClassName = tactician.gradclassName;
-        this,favInstructor = tactician.favInstructor;
+        this.favInstructor = tactician.favInstructor;
     }
-    standUp(projectMAnager, channel){
+    standUp(projectManager, channel){
         return `${this.name} announces to ${channel}, @channel standy times!`
     }
     debugsCode(apprentice, subject){
         return `${this.name} debugs ${apprentice.name}'s code on ${subject}`
     }
 }
+
+
+/////////// Lambda Person Objects
+
+const Barinder = new Person ({
+    name: 'Barinder',
+    age: 28,
+    location: 'San Jose, California',
+})
+
+const Joseph = new Person ({
+    name: 'Joseph',
+    age: 28,
+    location: 'Manila, Philippines'
+})
+
+const David = new Person ({
+    name: 'David',
+    age: 28,
+    location: 'Punjab, India'
+})
+
+
+
 
 
 
@@ -103,7 +129,7 @@ const Pikachu = new Student ({
 })
 
 
-const Charmander = new Student ({
+const Snorlax = new Student ({
     name: 'Snorlax',
     previousBackground: 'cashier',
     className: 'Order 66',
@@ -120,16 +146,16 @@ const PeterGriffin = new ProjectManager({
     favInstructor: 'Grand Master Yoda'
 })
 
-const PeterGriffin = new ProjectManager({
-    name: 'Peter Griffin',
+const GlenQuagmire = new ProjectManager({
+    name: 'Glen Quagmire',
     gradClassName: 'Family Guy',
-    favInstructor: 'Grand Master Yoda'
+    favInstructor: 'Lord Vader'
 })
 
-const PeterGriffin = new ProjectManager({
-    name: 'Peter Griffin',
+const MayorAdamWest = new ProjectManager({
+    name: 'Batman',
     gradClassName: 'Family Guy',
-    favInstructor: 'Grand Master Yoda'
+    favInstructor: 'Lord Sidious'
 })
 
 
